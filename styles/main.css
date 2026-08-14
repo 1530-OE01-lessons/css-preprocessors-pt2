@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.3;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #d8e5ef;
+  background: #122333;
+}
+
+header {
+  background: #182b3c;
+  box-shadow: 0.2rem 0.2rem 1rem #0d1b29;
+  border-bottom: 0.1rem solid #0d1b29;
+  padding: 1rem;
+}
+header .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header img {
+  height: 3rem;
+  margin-right: 1rem;
+}
+header h1 {
+  display: inline-block;
+}
+header h1 a {
+  font-size: 1.5rem;
+}
+header a {
+  color: #d8e5ef;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+ul.menu-links li {
+  line-height: 2rem;
+  text-align: center;
+  border-bottom: 0.1rem solid #445c70;
+  padding: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+ul.menu-links li:last-child {
+  border-bottom: none;
+}
+ul.menu-links li:hover, ul.menu-links li:focus {
+  background: #254058;
+}
+ul.menu-links li a {
+  display: block;
+  letter-spacing: 0.1rem;
+}
+
+.toggle-icon {
+  cursor: pointer;
+}
+.toggle-icon span {
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  border-radius: 3rem;
+  background: #2eac68;
+}
+
+nav {
+  box-shadow: 0.2rem 0.2rem 1rem #0d1b29;
+  position: absolute;
+  top: 5.125rem;
+  left: -100%;
+  width: 0;
+  overflow: hidden;
+  background: #182b3c;
+  transition: all 0.7s ease-in-out;
+}
+
+.show-nav nav {
+  left: 0;
+  width: 100vw;
+}
+.show-nav .toggle-icon span:first-child {
+  display: none;
+}
+.show-nav .toggle-icon span:nth-child(2) {
+  transform: rotate(45deg);
+  top: 0.5rem;
+}
+.show-nav .toggle-icon span:last-child {
+  transform: rotate(-45deg);
+  bottom: 0.1rem;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 4rem);
+  padding: 3rem;
+  text-align: center;
+}
+main section h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 2rem 0 6rem 0;
+}
+main section p {
+  font-size: 1.2rem;
+  margin-bottom: 2.6rem;
+}
+
+.card {
+  background-color: #182b3c;
+  border-radius: 0.3rem;
+  padding: 8rem 3rem;
+  box-shadow: 0.2rem 0.2rem 1rem #0d1b29;
+  position: relative;
+}
+.card a {
+  display: inline-block;
+  padding-top: 1.2rem;
+  color: #d8e5ef;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+.card img {
+  width: 6rem;
+  position: absolute;
+  left: -2rem;
+  bottom: -2rem;
+}
+
+form div {
+  margin-top: 1.6rem;
+}
+form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  text-align: left;
+}
+form input {
+  border-radius: 0.2rem;
+}
+form input:not([type=submit]) {
+  height: 2.2rem;
+  width: 100%;
+  background-color: #254058;
+  border: 1px solid #445c70;
+  padding: 0.6rem;
+  color: #d8e5ef;
+}
+form input[type=submit] {
+  background-color: #2eac68;
+  margin-top: 2rem;
+  padding: 0.8rem 3rem;
+  color: #d8e5ef;
+  cursor: pointer;
+}
+form input[type=submit]:hover {
+  background-color: #3ac87c;
+  transition: background-color 0.3s ease;
+}/*# sourceMappingURL=main.css.map */

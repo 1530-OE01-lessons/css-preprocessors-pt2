@@ -1,0 +1,99 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+
+// Header
+header {
+  background: $window;
+  box-shadow: $box-shadow;
+  border-bottom: 0.1rem solid $shadow;
+  padding: 1rem;
+  .flex {
+    @include flex($direction: row);
+  }
+  img {
+    height: 3rem;
+    margin-right: 1rem;
+  }
+  h1 {
+    display: inline-block;
+    a {
+      font-size: 1.5rem;
+    }
+  }
+  a {
+    color: $font;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+}
+
+// Menu Links
+ul.menu-links {
+  li {
+    line-height: 2rem;
+    text-align: center;
+    border-bottom: 0.1rem solid $borders;
+    padding: 1rem;
+    transition: background 0.3s ease-in-out;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:hover,
+    &:focus {
+      background: $mid-blue;
+    }
+    a {
+      display: block;
+      letter-spacing: 0.1rem;
+    } // a
+  } // li
+} // ul.menu-links
+
+// Hamburger Menu
+.toggle-icon {
+  cursor: pointer;
+  span {
+    display: block;
+    position: relative;
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    border-radius: 3rem;
+    background: $accent;
+  }
+}
+
+// Hiding The Menu
+nav {
+    box-shadow: $box-shadow;
+  position: absolute;
+  top: 5.125rem;
+  left: -100%;
+  width: 0;
+  overflow: hidden;
+  background: $window;
+  transition: all 0.7s ease-in-out;
+}
+
+.show-nav {
+    nav {
+        left: 0;
+        width: 100vw;
+    }
+    .toggle-icon {
+        span {
+           &:first-child {
+              display: none; 
+            }
+            &:nth-child(2) {
+              transform: rotate(45deg);
+              top: 0.5rem;
+            }
+            &:last-child {
+              transform: rotate(-45deg);
+              bottom: 0.1rem;
+            }
+        }
+    }
+}
